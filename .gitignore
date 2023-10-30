@@ -1,4 +1,5 @@
 #archivos y carpetas a ignorar
 testeo/
 .vsocode/
+.gitignore
 settings.json
