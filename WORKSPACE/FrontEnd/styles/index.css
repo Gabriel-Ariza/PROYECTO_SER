@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inclusive Sans", sans-serif;
+}
+
+
+/* =========================  ESTILOS GENERALES ========================= */
+
+.titulo {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+    text-align: center;
+}
+.content_image{
+    height: 100%;
+    width: 100%;
+    background: url(../sources/fondo_titulo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content_image h1{
+    font-size: 3rem;
+}
+
+.navbar {
+    background-color: black;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    height: 160vh;
+    width: 100%;
+    background-color: rgb(255, 252, 48);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.parte1  {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: azure;
+    border: 3px solid red;
+}
+.contenido_parte1 {
+    height: 80%;
+    width: 80%;
+    background-color: black;
+    border-radius: 50px;
+}
+
+.parte2 { 
+    height: 80vh;
+    width: 100%;
+    border: 3px solid rgb(115, 34, 255);
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagen_fondo {
+    border: 3px solid brown;
+    height: 100%;
+    width: 100%;
+    background: url(../sources/cohete.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.introduccion {
+    height: 300px;
+    width: 60%;
+    backdrop-filter: blur(20px);
+    background-color: rgb(210, 162, 102);
+    border-radius: 50px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

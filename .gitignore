@@ -1,0 +1,4 @@
+#archivos y carpetas a ignorar
+testeo/
+.vsocode/
+settings.json
