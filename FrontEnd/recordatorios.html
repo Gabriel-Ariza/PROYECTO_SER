@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/2e497294d6.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="sources/logo.png">
+
+    <link rel="stylesheet" href="styles/recordatorios.css">
+    <title>Recordatorios | TuApoyo</title>
+</head>
+
+
+<body>
+    <header class="titulo">
+        <div class="content_image">
+            <h1>Welcome to your safe space!</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Lista de Recordatorios</h1>
+        <div class="buttons">
+            <button id="abrirModal">Agregar Tarea</button>
+            <button id="tareas">Tareas Completadas</button>
+        </div>
+        <div id="modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="cerrarModal" id="cerrarModal">&times;</span>
+                <input type="text" id="tareaInput" placeholder="Escribe tu tarea">
+                <input type="date" id="fechaInput" placeholder="Fecha límite"> 
+                <button id="agregar">Agregar Tarea</button>
+            </div>
+        </div>
+        <table class="recordatorios">
+            <thead>
+                <tr>
+                    <th>Tarea</th>
+                    <th>Completado</th>
+                    <th>Fecha Límite</th> 
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="../BackEnd/js/recordatorios.js"></script>
+</body>
+</html>

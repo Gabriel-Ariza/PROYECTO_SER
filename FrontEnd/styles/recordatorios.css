@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    /* width: 100%; */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+.recordatorios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.recordatorios th, .recordatorios td {
+    border: 2px solid #5276ea;
+    padding: 10px;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border: 2px solid #110436;
+}
+
+button#agregar {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #260f78;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 140px;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+}
+
+.buttons button#abrirModal {
+    display: block;
+    /* margin: 20px auto; */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 140px;
+
+}
+
+button#agregar:hover {
+    background-color: #0056b3;
+}
