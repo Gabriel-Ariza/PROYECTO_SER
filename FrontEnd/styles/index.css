@@ -7,28 +7,23 @@
   font-family: "Inclusive Sans", sans-serif;
 }
 
-/* =========================  DEFINICION VARIABLES ========================= */
-/* =========================  ESTILOS GENERALES ========================= */
-.hola {
-  font-size: 20px;
-  font-weight: bolder;
-  color: white;
-  background-color: black;
-  padding: 10px;
-  color: #cccccc;
+html {
+  scroll-snap-type: y mandatory;
 }
 
+/* =========================  DEFINICION VARIABLES ========================= */
+/* =========================  ESTILOS ENCABEZADO ========================= */
 .titulo {
   height: 25vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: azure;
+  color: #f0ffff;
   text-align: center;
+  scroll-snap-align: start;
 }
-
-.content_image {
+.titulo .content_image {
   height: 100%;
   width: 100%;
   background: url(../sources/fondo_titulo.gif);
@@ -39,69 +34,89 @@
   align-items: center;
   justify-content: center;
 }
-
-.content_image h1 {
+.titulo h1 {
   font-size: 3rem;
 }
 
+/* =========================  ESTILOS NAVBAR ========================= */
 .navbar {
-  background-color: black;
+  background-color: #111111;
   height: 15vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
 .navbar a {
-  color: white;
+  color: #f0ffff;
   text-decoration: none;
   font-weight: bolder;
-  font-size: 24px;
+  font-size: 25px;
 }
-
 .navbar a:hover {
   text-decoration: underline;
+  color: #ff2640;
 }
 
+/* =========================  ESTILOS CONTENEDOR GENERAL ========================= */
 .container {
-  height: 160vh;
+  height: 170vh;
   width: 100%;
-  background-color: rgb(255, 252, 48);
+  background-color: #1a1a1a;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  color: #f0ffff;
 }
-
-.parte1 {
-  height: 60vh;
+.container .parte1 {
+  height: 70vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: azure;
   border: 3px solid red;
+  scroll-snap-align: start;
 }
-
-.contenido_parte1 {
-  height: 80%;
-  width: 80%;
-  background-color: black;
-  border-radius: 50px;
-}
-
-.parte2 {
+.container .parte2 {
   height: 80vh;
   width: 100%;
   border: 3px solid rgb(115, 34, 255);
-  color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+/* =========================  ESTILOS PARTE1 ========================= */
+.content_parte1 {
+  height: 100%;
+  width: 100%;
+  background: url(../sources/head.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.content_parte1 .mini_introduccion {
+  height: 300px;
+  width: 60%;
+  backdrop-filter: blur(20px);
+  background-color: #7322ff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content_parte1 h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
-.imagen_fondo {
+/* =========================  ESTILOS PARTE2 ========================= */
+.content_parte2 {
   border: 3px solid brown;
   height: 100%;
   width: 100%;
@@ -112,17 +127,20 @@
   align-items: center;
   justify-content: center;
 }
-
-.introduccion {
+.content_parte2 .introduccion {
   height: 300px;
   width: 60%;
   backdrop-filter: blur(20px);
-  background-color: rgb(210, 162, 102);
+  background-color: #d2a266;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.content_parte2 h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=index.css.map */

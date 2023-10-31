@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inclusive Sans", sans-serif;
+}
+html {
+    scroll-snap-type: y mandatory;
+}
+
+/* =========================  DEFINICION GENERALES ========================= */
+.titulo {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    background-color: #5f5c5c;
+
+    .contenido_titulo {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h1 {
+        font-size: clamp(3rem, 1.5rem, 4rem);
+    }
+}
+@media (max-width: 750px) {
+    .titulo {
+        height: auto;
+        flex-direction: column-reverse;
+        background-color: #77cbff;
+    }
+    .titulo h1 {
+        margin-bottom: 10px;
+    }
+    .informacion_sesion {
+        align-self: flex-end;
+        margin: 8px;
+        position: static !important;
+    }
+    .info_message span, .leave span {
+        color: #1a1a1a !important;
+        font-weight: bolder;
+    }
+    .leave i {
+        color: #ed6666 !important;
+    }
+    .leave span:hover {
+        color: #ed6666 !important;
+    }
+}
+/* =========================  ESTILOS INFO USUARIO ========================= */
+.informacion_sesion {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    height: 110px;
+    min-width: 150px;
+    max-width: 300px;
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    .usuario {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        // border: 3px solid #fdcd8e;
+    }
+    .logout {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        // border: 3px solid #8eacfd;
+    }
+    i {
+        font-size: 37px;
+        margin-left: 5px;
+        margin-right: 5px;
+        color: #ffffff;
+    }
+}
+.aguapanela {
+    height: 50px;
+    width: 50px;
+    .pan {
+        width: 100%;
+        height: 100%;
+    }
+}
+.info_message {
+    // border: 3px solid red;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span {
+        font-size: 26px;
+        letter-spacing: -1px;
+        color: #d1f2ff;
+    }
+}
+.leave {
+    height: 100%;
+    width: 100%;
+    // border: 3px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+
+    span {
+        font-size: 25px;
+        color: #d1f2ff;
+    }
+    i {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #8eacfd;
+    }
+    &:hover i {
+        color: #ff2640;
+    }
+    &:hover span {
+        color: #ff2640;
+        text-decoration: underline;
+    }
+}
+
+
+/* =========================  ESTILOS SECCION INFORMACION ========================= */
+.seccion_info {
+    height: 10vh;
+    width: 100%;
+    background-color: #dfff77;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.btn_seccion {
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #ff2640;
+    color: #d1f2ff;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+/* =========================  ESTILOS NOTAS ========================= */
+.contenedor_notas {
+    height: fit-content;
+    min-height: 50vh;
+    width: 100%;
+    background-color: #1a1a1a;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 25px;
+    padding: 40px;
+}
+.nota {
+    position: relative;
+    min-height: calc((100vh - 160px) / 3);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: bisque;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 680px) {
+    .contenedor_notas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+        padding: 40px 0;
+    }
+    .nota {
+        width: 90%;
+        height: 240px;
+    }
+}
+
+.nota1 {
+    grid-column: span 2;
+    background-color: #FFC3A0;
+    grid-row: span 6;
+}
+.nota2 {
+    grid-column: span 3;
+    background-color: #B8F2E6;
+    grid-row: span 5;
+}
+.nota3 {
+    grid-column: span 5;
+    background-color: #FFCB77;
+    grid-row: span 5;
+}
+
+.nota4 {
+    grid-column: span 5;
+    background-color: #dfff77;
+    grid-row: span 4;
+}
+.nota5 {
+    grid-column: span 3;
+    background-color: #ff9277;
+    grid-row: span 4;
+}
+.nota6 {
+    grid-column: span 2;
+    background-color: #77cbff;
+    grid-row: span 7;
+}
+
+.nota7 {
+    grid-column: span 4;
+    background-color: #ff77d2;
+    grid-row: span 4;
+}
+.nota8 {
+    grid-column: span 4;
+    background-color: #77d2ff;
+    grid-row: span 4;
+}
+
+
+.contenido_nota {
+
+    .opt {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    i {
+        font-size: 30px;
+        padding: 5px;
+        color: #5f5c5c;
+        z-index: 10;
+    }
+}

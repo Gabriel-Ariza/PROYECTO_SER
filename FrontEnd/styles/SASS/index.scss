@@ -7,104 +7,139 @@
     box-sizing: border-box;
     font-family: "Inclusive Sans", sans-serif;
 }
+html {
+    scroll-snap-type: y mandatory;
+}
 
 
 /* =========================  DEFINICION VARIABLES ========================= */
 
-$color_blanco: #ffffff; 
-$hola: #fff0ff;
+$color_blanco: #f0ffff;
+$color_fondo : #1a1a1a;
+$color_barra: #111111;
+
+$color_introduccion: #d2a266;
+$color_mini_introduccion: #7322ff;
+
+$letra_titulo: 3rem;
+$letra_subtitulo: 1.5rem;
+$letra_barra: 25px;
 
 
-/* =========================  ESTILOS GENERALES ========================= */
-.hola {
-    font-size: 20px;
-    font-weight: bolder;
-    color: white;
-    background-color: black;
-    padding: 10px;
-    color: darken($color_blanco, 20);
-}
-
-
+/* =========================  ESTILOS ENCABEZADO ========================= */
 .titulo {
     height: 25vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: azure;
+    color: $color_blanco;
     text-align: center;
-}
-.content_image{
-    height: 100%;
-    width: 100%;
-    background: url(../sources/fondo_titulo.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.content_image h1{
-    font-size: 3rem;
+    scroll-snap-align: start;
+
+    .content_image {
+        height: 100%;
+        width: 100%;
+        background: url(../sources/fondo_titulo.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h1 {
+        font-size: $letra_titulo;
+    }
 }
 
+
+/* =========================  ESTILOS NAVBAR ========================= */
 .navbar {
-    background-color: black;
+    background-color: $color_barra;
     height: 15vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    a {
+        color: $color_blanco;
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: $letra_barra;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #ff2640;
+    }
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
-    font-size: 24px;
-}
 
-.navbar a:hover {
-    text-decoration: underline;
-}
-
+/* =========================  ESTILOS CONTENEDOR GENERAL ========================= */
 .container {
-    height: 160vh;
+    height: 170vh;
     width: 100%;
-    background-color: rgb(255, 252, 48);
+    background-color: $color_fondo;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-}
-.parte1  {
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: azure;
-    border: 3px solid red;
-}
-.contenido_parte1 {
-    height: 80%;
-    width: 80%;
-    background-color: black;
-    border-radius: 50px;
+    color: $color_blanco;
+
+    .parte1 {
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 3px solid red;
+        scroll-snap-align: start;
+    }
+    .parte2 { 
+        height: 80vh;
+        width: 100%;
+        border: 3px solid rgb(115, 34, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        scroll-snap-align: start;
+    }
 }
 
-.parte2 { 
-    height: 80vh;
+/* =========================  ESTILOS PARTE1 ========================= */
+.content_parte1 {
+    height: 100%;
     width: 100%;
-    border: 3px solid rgb(115, 34, 255);
-    color: azure;
+    background: url(../sources/head.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .mini_introduccion {
+        height: 300px;
+        width: 60%;
+        backdrop-filter: blur(20px);
+        background-color: $color_mini_introduccion;
+        border-radius: 50px;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: $letra_subtitulo;
+        font-weight: 600;
+    }
 }
-.imagen_fondo {
+
+/* =========================  ESTILOS PARTE2 ========================= */
+.content_parte2 {
     border: 3px solid brown;
     height: 100%;
     width: 100%;
@@ -114,16 +149,22 @@ $hola: #fff0ff;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.introduccion {
-    height: 300px;
-    width: 60%;
-    backdrop-filter: blur(20px);
-    background-color: rgb(210, 162, 102);
-    border-radius: 50px;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+
+    .introduccion {
+        height: 300px;
+        width: 60%;
+        backdrop-filter: blur(20px);
+        background-color: $color_introduccion;
+        border-radius: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: $letra_subtitulo;
+        font-weight: 600;
+    }
 }
