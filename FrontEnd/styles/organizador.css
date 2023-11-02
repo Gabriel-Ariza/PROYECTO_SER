@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inclusive Sans", sans-serif;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+/* =========================  ESTILOS ENCABEZADO ========================= */
+.titulo {
+  scroll-snap-align: start;
+  height: 25vh;
+  width: 100%;
+  background-color: #F2E1B1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titulo h1 {
+  color: rgb(77, 169, 250);
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+/* =========================  ESTILOS NAVBAR ========================= */
+.navbar {
+  background-color: #1a1a1a;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar a {
+  color: azure;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 25px;
+}
+.navbar a:hover {
+  text-decoration: underline;
+  color: #ff2640;
+}
+
+.contenedor {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #150F40;
+}
+
+/* =========================  DEFINICION GENERALES ========================= */
+#to_upload {
+  background-color: #FAFAFA;
+  border: 5px dashed #BBB;
+  padding: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#to_upload a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+  text-decoration: none;
+}
+
+#to_upload a input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+#to_upload > div {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+/* 5 imagenes por fila */
+#to_upload > div > div {
+  width: 220px;
+  height: 165px;
+  padding-right: 1%;
+  padding-left: 1%;
+  float: left;
+}
+
+.dd-thumbnail {
+  min-height: 140px;
+  /* todo:imagenes perfectas en el div */
+  background-size: cover;
+}
+
+.dd-thumbnail i {
+  /*icon size*/
+  font-size: 50px;
+  margin-top: 40px;
+}
+
+.dd-file-info {
+  width: 100%;
+}
+
+.dd-file-info span {
+  float: left;
+  font-size: 13px;
+  padding-top: 3px;
+}
+
+.dd-file-info button {
+  float: right;
+  background: none;
+  border: none;
+  outline: none;
+  color: #444444;
+}
+
+/*# sourceMappingURL=organizador.css.map */

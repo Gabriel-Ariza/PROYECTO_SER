@@ -15,16 +15,23 @@
 
 <body>
     <header class="titulo">
-        <div class="content_image">
-            <h1>Welcome to your safe space!</h1>
-        </div>
-    </header>
-    <div class="container">
         <h1>Lista de Recordatorios</h1>
+    </header>
+
+    <div class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="recordatorios.html">Recordatorios</a>
+        <a href="herramientas.html">Herramientas</a>
+        <a href="organizador.html">Organizador</a>
+        <a href="notas.html">Notas</a>
+    </div>
+
+    <div class="contenedor">
         <div class="buttons">
             <button id="abrirModal">Agregar Tarea</button>
             <button id="tareas">Tareas Completadas</button>
         </div>
+
         <div id="modal" class="modal" style="display: none;">
             <div class="modal-content">
                 <span class="cerrarModal" id="cerrarModal">&times;</span>
@@ -33,6 +40,8 @@
                 <button id="agregar">Agregar Tarea</button>
             </div>
         </div>
+
+        <div class="separation"></div>
         <table class="recordatorios">
             <thead>
                 <tr>

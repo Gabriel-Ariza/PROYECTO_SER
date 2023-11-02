@@ -16,7 +16,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const descripcionNotaInput = document.getElementById('descripcionNota');
 
     crearNotaBtn.addEventListener('click', function () {
-        document.querySelector('.nota-nueva').style.display = 'block';
+
+        let modal = document.getElementById('modal');
+        let cerrar_modal = document.getElementById('boton_x');
+        modal.style.display = 'flex';
+    
+        cerrar_modal.addEventListener('click', ()=> {
+            modal.style.display = 'none';
+            descripcionNotaInput.value = '';
+        })
     });
 
     document.getElementById('guardarNota').addEventListener('click', function () {
@@ -75,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     nuevaNota.querySelector('.text').textContent = descripcionNota;
                 }
             });
+            modal.style.display = 'none';
         }
     });
 

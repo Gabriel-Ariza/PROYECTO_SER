@@ -23,7 +23,7 @@
                     <img src="sources/logo.png" alt="logo" class="pan">
                 </i>
                 <div class="info_message">
-                    <span id="nombre_usuario">Pepito Perez</span>
+                    <span id="nombre_usuario">E.T</span>
                 </div>
             </div>
             <div class="logout">
@@ -53,16 +53,20 @@
         <!-- Aquí se agregarán las notas -->
     </div>
 
-    <div class="modal_añadir">
-        <div class="nota-nueva"></div>
+    <div class="modal_añadir" id="modal">
+        <div class="modal_contenido">
+            <div class="saludo">
+                <span id="boton_x" class="close">&times;</span>
+                <div class="pan_de_bono">
+                    <textarea id="descripcionNota" class="desc" placeholder="Escribe una descripción..."></textarea>
+                    <div class="container_save_note">
+                        <button id="guardarNota" class="btn_save_note">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-<!--         <div class="pan_de_bono">
-            <textarea id="descripcionNota" class="desc" placeholder="Escribe una descripción..."></textarea>
-            <div class="container_save_note">
-                <button id="guardarNota" class="btn_save_note">Guardar</button>
-            </div>
-        </div> -->
 
     <script src="../BackEnd/js/notas.js"></script>
 </body>

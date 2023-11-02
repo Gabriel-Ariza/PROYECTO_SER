@@ -172,7 +172,6 @@ html {
 }
 
 .seccion_añadir {
-  min-height: 12vh;
   height: auto;
   width: 100%;
   background-color: #8a8383;
@@ -186,16 +185,6 @@ html {
   align-self: flex-start;
   height: 100px;
   width: 300px;
-  border: 3px solid white;
-}
-.seccion_añadir .nota-nueva {
-  height: 10vh;
-  width: 100%;
-  border: 3px solid white;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .create_note {
@@ -205,34 +194,6 @@ html {
   border-radius: 25px;
   background-color: #ff2640;
   color: #edfaff;
-  font-weight: bolder;
-  font-size: 1rem;
-}
-
-.pan_de_bono {
-  height: 100%;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-  border: 3px solid rgb(255, 144, 144);
-}
-.pan_de_bono .desc {
-  width: 220px;
-  height: 50px;
-  border-radius: 15px;
-  text-align: center;
-}
-.pan_de_bono .desc::placeholder {
-  text-align: center;
-}
-.pan_de_bono .btn_save_note {
-  width: 180px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #77cbff;
-  color: #f0f7fa;
   font-weight: bolder;
   font-size: 1rem;
 }
@@ -275,54 +236,6 @@ html {
     height: 240px;
   }
 }
-.nota1 {
-  grid-column: span 2;
-  background-color: #FFC3A0;
-  grid-row: span 6;
-}
-
-.nota2 {
-  grid-column: span 3;
-  background-color: #B8F2E6;
-  grid-row: span 5;
-}
-
-.nota3 {
-  grid-column: span 5;
-  background-color: #FFCB77;
-  grid-row: span 5;
-}
-
-.nota4 {
-  grid-column: span 5;
-  background-color: #dfff77;
-  grid-row: span 4;
-}
-
-.nota5 {
-  grid-column: span 3;
-  background-color: #ff9277;
-  grid-row: span 4;
-}
-
-.nota6 {
-  grid-column: span 2;
-  background-color: #77cbff;
-  grid-row: span 7;
-}
-
-.nota7 {
-  grid-column: span 4;
-  background-color: #ff77d2;
-  grid-row: span 4;
-}
-
-.nota8 {
-  grid-column: span 4;
-  background-color: #ffd277;
-  grid-row: span 4;
-}
-
 .contenido_nota .opt {
   position: absolute;
   bottom: 10px;
@@ -338,5 +251,73 @@ html {
 }
 
 /* =========================  ESTILOS MODAL ========================= */
+.modal_añadir {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.modal_añadir .modal_contenido {
+  height: 50%;
+  width: 60%;
+  background-color: #fbfeff;
+  color: #1a1a1a;
+  border-radius: 30px;
+}
+
+.saludo {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pan_de_bono {
+  height: 80%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pan_de_bono .desc {
+  width: 80%;
+  height: 150px;
+  border: 3px solid black;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.pan_de_bono .desc::placeholder {
+  text-align: center;
+}
+.pan_de_bono .btn_save_note {
+  border: none;
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #ff2640;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #ff2640;
+  font-size: 35px;
+  font-weight: bolder;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=notas.css.map */
