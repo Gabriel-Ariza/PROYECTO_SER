@@ -21,18 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('guardarNota').addEventListener('click', function () {
         const descripcionNota = descripcionNotaInput.value;
-
+    
         if (descripcionNota.trim() !== '') {
             const nuevaNota = document.createElement('div');
-
-            // Clase aleatoria para el tamaño de la nota
-            const tamanioNotas = ['nota-pequena', 'nota-mediana', 'nota-grande'];
-            const randomTamanio = tamanioNotas[Math.floor(Math.random() * tamanioNotas.length)];
-            nuevaNota.className = 'nota ' + randomTamanio;
-
+            nuevaNota.classList.add('nota');
+    
+            const tamanio = generarTamanioAleatorio();
+            nuevaNota.style.gridRow = `span ${tamanio.rowSpan}`;
+            nuevaNota.style.gridColumn = `span ${tamanio.columnSpan}`;
+    
             const randomColor = getRandomColor();
             nuevaNota.style.backgroundColor = randomColor;
-
+    
             nuevaNota.innerHTML = `
                 <div class="contenido_nota">
                     <p class="text">${descripcionNota}</p>
@@ -42,17 +42,31 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 </div>
             `;
-
+    
             contenedorNotas.appendChild(nuevaNota);
-
             descripcionNotaInput.value = '';
-            document.querySelector('.nota-nueva').style.display = 'none';
 
+
+            const notas = contenedorNotas.querySelectorAll('.nota');
+            const numNotas = notas.length;
+    
+            if (numNotas % 3 === 0) {
+                notas.forEach(nota => {
+                    nota.style.gridColumn = `span ${3 + Math.floor(Math.random() * 4)}`; // Asignar tamaño entre 3 y 6
+                });
+            } else {
+                for (let i = 0; i < numNotas - 1; i++) {
+                    notas[i].style.gridColumn = `span ${3 + Math.floor(Math.random() * 4)}`; // Asignar tamaño entre 3 y 6
+                }
+            }
+    
+
+    
             const eliminarNotaBtn = nuevaNota.querySelector('.eliminar_nota');
             eliminarNotaBtn.addEventListener('click', function () {
                 contenedorNotas.removeChild(nuevaNota);
             });
-
+    
             const editarNotaBtn = nuevaNota.querySelector('.editar_nota');
             editarNotaBtn.addEventListener('click', function () {
                 const nuevoDescripcion = prompt('Editar la descripción:', descripcionNota);
@@ -64,13 +78,38 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
     function getRandomColor() {
-/*         const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
+        const colores = ['#FFC3A0', '#B8F2E6', '#FFCB77', '#dfff77', '#ff9277', '#77cbff', '#ff77d2', '#ffd277'];
+
+        if (!getRandomColor.counter) {
+            getRandomColor.counter = 0;
         }
-        return color; */
-        const colores = ['#FFC3A0','#B8F2E6','#FFCB77','#dfff77','#ff9277','#77cbff','#ff77d2','#ffd277']
+    
+        if (getRandomColor.counter < colores.length) {
+            return colores[getRandomColor.counter++];
+
+        } else {
+/*             const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+            return randomColor; */
+            let min = 150;
+            let max = 250;
+        
+            const red = Math.floor(Math.random() * (max - min + 1)) + min;
+            const green = Math.floor(Math.random() * (max - min + 1)) + min;
+            const blue = Math.floor(Math.random() * (max - min + 1)) + min;
+            return '#' + red.toString(16) + green.toString(16) + blue.toString(16);
+        }
+    }
+    function generarTamanioAleatorio() {
+        const minRowSpan = 4;
+        const maxRowSpan = 6;
+        const minColumnSpan = 3;
+        const maxColumnSpan = 6;
+    
+        const rowSpan = Math.floor(Math.random() * (maxRowSpan - minRowSpan + 1)) + minRowSpan;
+        const columnSpan = Math.floor(Math.random() * (maxColumnSpan - minColumnSpan + 1)) + minColumnSpan;
+    
+        return { rowSpan, columnSpan };
     }
 });

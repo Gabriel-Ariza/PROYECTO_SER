@@ -1,59 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://kit.fontawesome.com/2e497294d6.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="sources/logo.png">
-
-    <link rel="stylesheet" href="styles/notas.css">
-    <title>Notas | TuApoyo</title>
-</head>
-<body>
-    <header class="titulo">
-        <div class="contenido_titulo">
-            <h1>Guarda aquí tus cosas importantes!</h1>
-        </div>
-
-        <div class="informacion_sesion">
-            <div class="usuario">
-                <i class="aguapanela">
-                    <img src="sources/logo.png" alt="logo" class="pan">
-                </i>
-                <div class="info_message">
-                    <span id="nombre_usuario">Pepito Perez</span>
-                </div>
-            </div>
-            <div class="logout">
-                <div id="salir_cuenta" class="leave">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    <span>Salir</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="nota nota-nueva">
-        <div class="contenido_nota">
-            <textarea id="descripcionNota" placeholder="Escribe una descripción..."></textarea>
-            <div class="opt">
-                <button id="guardarNota">Guardar</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="contenedor_notas">
-        --- Aquí se agregarán las notas ---
-    </div>
-
-    <button id="añadir_nota">CREA UNA NUEVA NOTA</button>
-
-    <script src="../BackEnd/js/notas.js"></script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,20 +35,34 @@
         </div>
     </header>
 
-    <button id="crearNota">CREA UNA NUEVA NOTA</button>
+        <div class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="recordatorios.html">Recordatorios</a>
+            <a href="herramientas.html">Herramientas</a>
+            <a href="organizador.html">Organizador</a>
+            <a href="notas.html">Notas</a>
+        </div>
 
-    <div class="nota nota-nueva">
-        <div class="contenido_nota">
-            <textarea id="descripcionNota" placeholder="Escribe una descripción..."></textarea>
-            <div class="opt">
-                <button id="guardarNota">Guardar</button>
-            </div>
+    <div class="seccion_añadir">
+        <div class="contenedor_btn">
+            <button id="crearNota" class="create_note">CREA UNA NUEVA NOTA</button>
         </div>
     </div>
 
     <div class="contenedor_notas">
         <!-- Aquí se agregarán las notas -->
     </div>
+
+    <div class="modal_añadir">
+        <div class="nota-nueva"></div>
+    </div>
+
+<!--         <div class="pan_de_bono">
+            <textarea id="descripcionNota" class="desc" placeholder="Escribe una descripción..."></textarea>
+            <div class="container_save_note">
+                <button id="guardarNota" class="btn_save_note">Guardar</button>
+            </div>
+        </div> -->
 
     <script src="../BackEnd/js/notas.js"></script>
 </body>

@@ -75,7 +75,32 @@ $letra_barra: 25px;
     }
 }
 
+.introduccion {
+    height: 50vh;
+    width: 100%;
+    background-color: #391BA6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.mensaje {
+height: 50%;
+width: 60%;
+border-radius: 60px;
+border: 5px solid azure;
+display: flex;
+align-items: center;
+justify-content: center;
+scroll-snap-align: start;
+
+    p {
+        font-size: 3rem;
+        font-weight: bolder;
+        text-align: center;
+        color: white;
+    }
+}
 /* =========================  ESTILOS CONTENEDOR GENERAL ========================= */
 .container {
     height: 170vh;

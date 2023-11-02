@@ -57,6 +57,32 @@ html {
   color: #ff2640;
 }
 
+.introduccion {
+  height: 50vh;
+  width: 100%;
+  background-color: #391BA6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mensaje {
+  height: 50%;
+  width: 60%;
+  border-radius: 60px;
+  border: 5px solid azure;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+.mensaje p {
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+}
+
 /* =========================  ESTILOS CONTENEDOR GENERAL ========================= */
 .container {
   height: 170vh;
@@ -75,13 +101,11 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 3px solid red;
   scroll-snap-align: start;
 }
 .container .parte2 {
   height: 80vh;
   width: 100%;
-  border: 3px solid rgb(115, 34, 255);
   display: flex;
   align-items: center;
   justify-content: center;

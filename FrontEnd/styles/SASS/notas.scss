@@ -144,6 +144,29 @@ html {
     }
 }
 
+$color_barra: #111111;
+$color_blanco: #f0ffff;
+
+/* =========================  ESTILOS NAVBAR ========================= */
+.navbar {
+    background-color: $color_barra;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+        color: $color_blanco;
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 25px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #ff2640;
+    }
+}
 
 /* =========================  ESTILOS SECCION INFORMACION ========================= */
 .seccion_info {
@@ -156,14 +179,72 @@ html {
     justify-content: flex-start;
 }
 
-.btn_seccion {
-    width: 180px;
-    height: 50px;
+.seccion_añadir {
+    min-height: 12vh;
+    height: auto;
+    width: 100%;
+    background-color: #8a8383;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .contenedor_btn {
+        display: flex;
+        align-self: flex-start;
+        height: 100px;
+        width: 300px;
+        border: 3px solid white;
+    }
+
+    .nota-nueva {
+        height: 10vh;
+        width: 100%;
+        border: 3px solid white;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+.create_note {
+    width: 260px;
+    height: 60px;
+    margin: auto;
     border-radius: 25px;
     background-color: #ff2640;
-    color: #d1f2ff;
+    color: #edfaff;
     font-weight: bolder;
     font-size: 1rem;
+}
+
+.pan_de_bono {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border: 3px solid rgb(255, 144, 144);
+
+    .desc {
+        width: 220px;
+        height: 50px;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .desc::placeholder {
+        text-align: center;
+    }
+    .btn_save_note {
+        width: 180px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #77cbff;
+        color: #f0f7fa;
+        font-weight: bolder;
+        font-size: 1rem;
+    }
 }
 
 /* =========================  ESTILOS NOTAS ========================= */
@@ -173,7 +254,7 @@ html {
     width: 100%;
     background-color: #1a1a1a;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-gap: 25px;
     padding: 40px;
 }
@@ -182,7 +263,7 @@ html {
     min-height: calc((100vh - 160px) / 3);
     padding: 20px;
     border-radius: 8px;
-    background-color: bisque;
+    // background-color: bisque;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -265,3 +346,7 @@ html {
         z-index: 10;
     }
 }
+
+
+/* =========================  ESTILOS MODAL ========================= */
+
