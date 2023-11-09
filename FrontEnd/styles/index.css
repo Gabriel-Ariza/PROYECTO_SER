@@ -77,7 +77,7 @@ html {
   scroll-snap-align: start;
 }
 .mensaje p {
-  font-size: 3rem;
+  font-size: 1.3rem;
   font-weight: bolder;
   text-align: center;
   color: white;
@@ -126,6 +126,8 @@ html {
 .content_parte1 .mini_introduccion {
   height: 300px;
   width: 60%;
+  padding: 10px;
+  font-size: 20px;
   backdrop-filter: blur(20px);
   background-color: #7322ff;
   border-radius: 50px;

@@ -5,14 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="sources/logo.png">
+    <script src="https://kit.fontawesome.com/2e497294d6.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles/login.css">
     <title>Login | TuApoyo</title>
 </head>
 
-<body>
-    
 
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <div class="info_sesion">
+
+            <div class="inicio" id="div_login">
+                <img src="img/idle/1.png" id="monster" alt="">
+                <form class="form" id="form_login">
+                    <h2>Inicia Sesión</h2>
+                    <div class="input_contenedor">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" class="inp" id="input-usuario" autocomplete="off" required>
+                        <label for="input-usuario">Usuario</label>
+                    </div>
+                    
+                    <div class="input_contenedor">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" class="inp" id="input-clave" required>
+                        <label  for="input-clave">Contraseña</label>
+                    </div>
+                    <button type="submit" class="boton">Login</button>
+                    <p class="msg">No tienes Cuenta? <a href="" id="cambiar_a_register">Registrate</a></p>
+                </form>
+            </div>
+
+            <div class="register" id="div_registrarse">
+                <form class="formulario_registro" id="form_register">
+                    <h2>Registrate</h2>
+                    <div class="input_registro">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" class="inptr" id="correo_registro" autocomplete="off" required>
+                        <label for="correo_registro">Correo</label>
+                    </div>
+                    <div class="input_registro">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" class="inptr" id="usuario_registro" autocomplete="off" required>
+                        <label for="usuario_registro">Usuario</label>
+                    </div>
+                    
+                    <div class="input_registro">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" class="inptr" id="contraseña_registro" required>
+                        <label for="contraseña_registro">Contraseña</label>
+                    </div>
+                    <button type="submit" class="boton">Registrarse!</button>
+                    <p class="msg" style="padding: 10px 0;">Ya tienes cuenta? <a href="#" id="cambiar_a_login">Inicia Sesion</a></p>
+                </form>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script src="../BackEnd/js/particles.min.js"></script>
     <script src="../BackEnd/js/login.js"></script>
 </body>
 </html>

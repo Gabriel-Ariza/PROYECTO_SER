@@ -95,7 +95,7 @@ justify-content: center;
 scroll-snap-align: start;
 
     p {
-        font-size: 3rem;
+        font-size: 1.3rem;
         font-weight: bolder;
         text-align: center;
         color: white;
@@ -145,6 +145,8 @@ scroll-snap-align: start;
     .mini_introduccion {
         height: 300px;
         width: 60%;
+        padding: 10px;
+        font-size: 20px;
         backdrop-filter: blur(20px);
         background-color: $color_mini_introduccion;
         border-radius: 50px;

@@ -18,10 +18,13 @@ html {
   height: 25vh;
   width: 100%;
   background-color: #F2E1B1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .titulo h1 {
-  color: aliceblue;
   font-size: 3rem;
+  color: rgb(77, 169, 250);
 }
 
 /* =========================  ESTILOS NAVBAR ========================= */
@@ -52,6 +55,9 @@ html {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  background: url(../sources/galaxy.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .contenedor .introduccion {
   height: 50vh;
@@ -62,29 +68,46 @@ html {
   justify-content: center;
 }
 .contenedor .tarjetas {
-  scroll-snap-align: start;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+  gap: 35px;
   padding: 60px 40px;
-  background: url(../sources/vector.webp);
   place-items: center;
   min-height: 60vh;
+  height: fit-content;
   width: 100%;
 }
 
+.section4 {
+  scroll-snap-align: start;
+}
+
+.section3 {
+  scroll-snap-align: start;
+}
+
+.tarjetas > section {
+  padding: 15px;
+}
+
 .tjt {
-  height: 450px;
+  height: 550px;
   width: 100%;
   max-width: 600px;
   border-radius: 50px;
   border: 5px solid azure;
-  color: #1a1a1a;
-  background-color: #e1cc94;
-  backdrop-filter: blur(4px);
+  color: azure;
+  backdrop-filter: blur(200px);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.frente p {
+  font-size: 18px;
+}
+.frente h1 {
+  text-align: center;
 }
 
 .mensaje {
@@ -95,7 +118,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
 }
 .mensaje p {
   font-size: 3rem;
